@@ -2,10 +2,10 @@
 
 ## Introduction
 
-This project involved assessing SewaltCorp’s cybersecurity posture and developing a program aligned to the [NIST CSF 2.0](https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20).  
+This project involved assessing WaltCorp’s cybersecurity posture and developing a program aligned to the [NIST CSF 2.0](https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20).  
 I was provided with a “current state” report reflecting interviews, documentation, and initial observations. Using the CSF as a baseline, I performed a pass/fail assessment across each category and mapped findings against desired outcomes.  
 
-The engagement began with a short stakeholder briefing to explain the framework and roadmap. It concluded with a comprehensive set of recommendations and procedures aimed at moving SewaltCorp from its current state to a mature, adaptive security posture.  
+The engagement began with a short stakeholder briefing to explain the framework and roadmap. It concluded with a comprehensive set of recommendations and procedures aimed at moving WaltCorp from its current state to a mature, adaptive security posture.  
 
 <img height="1000" alt="image" src="https://github.com/user-attachments/assets/8797b396-7290-4969-a6e9-cbb48ee2aa4c" />
 
@@ -35,7 +35,7 @@ CSF 2.0 defines tiers to measure rigor in cybersecurity risk governance and mana
   Risk strategy is ad hoc, awareness is limited, and governance is fragmented. Cyber risks are not consistently shared or considered at the organizational level. Supplier and third-party risks are largely unmanaged.
 
 - **Target Profile — Tier 4: Adaptive**  
-  Cybersecurity is integrated into enterprise risk management. Executives treat it alongside financial and operational risks. Continuous improvement, near real-time risk awareness, and advanced practices enable SewaltCorp to adapt to a dynamic threat landscape.
+  Cybersecurity is integrated into enterprise risk management. Executives treat it alongside financial and operational risks. Continuous improvement, near real-time risk awareness, and advanced practices enable WaltCorp to adapt to a dynamic threat landscape.
 
 At every stage, the guiding principle is the **CIA Triad** — ensuring confidentiality, integrity, and availability of information assets.  
 
@@ -44,7 +44,7 @@ At every stage, the guiding principle is the **CIA Triad** — ensuring confiden
 ---
 
 <details close>
-<summary><h3>SewaltCorp Current State Report (Click to expand)</h3></summary>
+<summary><h3>WaltCorp Current State Report (Click to expand)</h3></summary>
 
 **Cybersecurity Team**  
 - Analyst: Generalist, reactive incident handling. Reports to IT Manager.  
@@ -130,6 +130,6 @@ At every stage, the guiding principle is the **CIA Triad** — ensuring confiden
 
 ## Conclusion
 
-SewaltCorp’s current posture is reactive and siloed (Tier 1: Partial). By adopting the NIST CSF 2.0 as a roadmap, supported by frameworks like MITRE ATT&CK, NIST 800-53, and OWASP, SewaltCorp can evolve toward an adaptive, risk-informed program (Tier 4).  
+WaltCorp’s current posture is reactive and siloed (Tier 1: Partial). By adopting the NIST CSF 2.0 as a roadmap, supported by frameworks like MITRE ATT&CK, NIST 800-53, and OWASP, WaltCorp can evolve toward an adaptive, risk-informed program (Tier 4).  
 
 The path forward centers on governance, continuous monitoring, vulnerability management, and integrating security into the culture of the organization.  
