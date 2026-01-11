@@ -1,135 +1,203 @@
-# Cybersecurity Assessment & Posture Reinforcement Using NIST Cybersecurity Framework (CSF) 2.0
+# Cybersecurity Assessment & Posture Reinforcement  
+## NIST Cybersecurity Framework (CSF) 2.0 – Dental Practice Case Study
 
-## Introduction
+**Organization:** [Redacted] Family Dental
+**Location:** Fontana, CA
+**Practice Size:** 1 Dentist, 3 Staff (Office Manager, Dental Assistant, Hygienist)  
+**Engagement Type:** Independent Cybersecurity Assessment & Roadmap  
+**Framework Used:** NIST Cybersecurity Framework (CSF) 2.0  
 
-This project involved assessing WaltCorp’s cybersecurity posture and developing a program aligned to the [NIST CSF 2.0](https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20).  
-I was provided with a “current state” report reflecting interviews, documentation, and initial observations. Using the CSF as a baseline, I performed a pass/fail assessment across each category and mapped findings against desired outcomes.  
-
-The engagement began with a short stakeholder briefing to explain the framework and roadmap. It concluded with a comprehensive set of recommendations and procedures aimed at moving WaltCorp from its current state to a mature, adaptive security posture.  
-
-<img height="1000" alt="image" src="https://github.com/user-attachments/assets/8797b396-7290-4969-a6e9-cbb48ee2aa4c" />
-
+**Reference:**  
+NIST Cybersecurity Framework 2.0  
+https://www.nist.gov/cyberframework
 
 ---
 
-## CSF Core Functions
+## Introduction
 
-The CSF Core Functions — **GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND, RECOVER** — represent the highest-level outcomes of an effective cybersecurity program.
+This engagement involved assessing and improving the cybersecurity posture of a small, independently owned dental practice handling **electronic Protected Health Information (ePHI)**. The objective was to evaluate the practice’s current cybersecurity posture, identify material risks, and develop a pragmatic improvement roadmap aligned with the **NIST Cybersecurity Framework (CSF) 2.0**, while remaining realistic for a low-budget, non-technical environment.
 
-| Function | Description |
-|----------|-------------|
-| ![govern](https://github.com/user-attachments/assets/c536c78f-b8d2-4988-a1ad-ea1b0222bd41) | Establish, communicate, and monitor risk management strategy and policy. |
-| ![identify](https://github.com/user-attachments/assets/bd218bc5-9048-4d91-96fd-77aba367d87b) | Understand current cybersecurity risks. |
-| ![protect](https://github.com/user-attachments/assets/f6554061-0d01-49e9-91df-b102eb4b8ac7) | Implement safeguards to manage risks. |
-| ![detect](https://github.com/user-attachments/assets/26e591c9-9ee6-454f-9f5b-37062bec1d0c) | Identify and analyze potential attacks. |
-| ![respond](https://github.com/user-attachments/assets/bfdf2e21-ced1-4767-8ac6-4ec982b6f5e3) | Take appropriate actions during an incident. |
-| ![recover](https://github.com/user-attachments/assets/10ef5d64-da8b-41df-a0fe-56acb244fd1c) | Restore affected assets and operations. |
+The assessment was conducted using:
+- Staff interviews  
+- Review of existing IT practices  
+- Observation of daily workflows  
+- Configuration review of systems and cloud services  
+
+Findings were mapped to CSF outcomes using a **pass / partial / fail** model. Recommendations focused on **HIPAA-aligned safeguards**, operational resilience, and risk reduction rather than enterprise-grade tooling.
+
+The engagement began with a short briefing to explain cybersecurity risk in plain language and concluded with prioritized, achievable remediation steps.
+
+---
+
+## CSF Core Functions Overview
+
+The NIST CSF Core Functions provide a lifecycle view of cybersecurity risk management:
+
+| Function | Purpose |
+|--------|--------|
+| **GOVERN** | Establish risk strategy, roles, and accountability |
+| **IDENTIFY** | Understand assets, data, and risks |
+| **PROTECT** | Safeguard systems and patient data |
+| **DETECT** | Identify cybersecurity events |
+| **RESPOND** | Contain and manage incidents |
+| **RECOVER** | Restore operations and data |
 
 ---
 
 ## Governance Tiers
 
-CSF 2.0 defines tiers to measure rigor in cybersecurity risk governance and management.  
+CSF 2.0 defines **Implementation Tiers** to describe the maturity of cybersecurity governance.
 
-- **Current Profile — Tier 1: Partial**  
-  Risk strategy is ad hoc, awareness is limited, and governance is fragmented. Cyber risks are not consistently shared or considered at the organizational level. Supplier and third-party risks are largely unmanaged.
+### Current Profile — Tier 1: Partial
+- Cybersecurity handled reactively and informally  
+- No documented policies or risk process  
+- Heavy reliance on external IT vendor  
+- Security decisions driven by convenience and cost  
 
-- **Target Profile — Tier 4: Adaptive**  
-  Cybersecurity is integrated into enterprise risk management. Executives treat it alongside financial and operational risks. Continuous improvement, near real-time risk awareness, and advanced practices enable WaltCorp to adapt to a dynamic threat landscape.
+### Target Profile — Tier 2: Risk-Informed
+- Basic governance and policies documented  
+- Security risks considered in operational decisions  
+- Clear responsibility assigned for cybersecurity tasks  
+- Controls aligned with HIPAA Security Rule safeguards  
 
-At every stage, the guiding principle is the **CIA Triad** — ensuring confidentiality, integrity, and availability of information assets.  
-
-![cia](https://github.com/user-attachments/assets/5b8e35de-2c04-4de8-a82c-bb526a3f6f5c)
-
----
-
-<details close>
-<summary><h3>WaltCorp Current State Report (Click to expand)</h3></summary>
-
-**Cybersecurity Team**  
-- Analyst: Generalist, reactive incident handling. Reports to IT Manager.  
-- Network Engineer: Firewall administration. Reports to Network Team Lead.  
-- Cybersecurity Consultant: (my role) reporting initially to IT Manager.  
-
-**Key Observations**  
-- **Governance**: CEO has business strategy, but no cybersecurity strategy or defined roles.  
-- **Assets**: Spreadsheet inventory of laptops; no asset classification; all data in Azure/Office 365.  
-- **Continuity**: Documented DR and BCP with regular testing. Backups in place.  
-- **Vulnerability Management**: Owns Qualys but scans are ad hoc. No formal program.  
-- **Risk Management**: No cyber risk process; only financial risk covered.  
-- **Third-Party Risk**: No supplier risk management; procurement handles contracts.  
-- **IAM**: Active Directory used, but no PAM, no MFA, shared admin accounts. VPN without MFA.  
-- **Network Security**: Palo Alto firewalls in place, updated and segmented network.  
-- **Physical Security**: Strong CCTV, vetting, and 24/7 monitoring.  
-- **Data Security**: No DLP. All critical data cloud-hosted.  
-- **Policies**: Generic IT policy only. No formal infosec or data governance.  
-- **Detection/Response**: No SIEM. Response limited to Microsoft Defender alerts.  
-- **Awareness**: One-time web training during induction; no ongoing program.  
-
-</details>
+> For a small dental practice, Tier 2 represents a **realistic and sustainable target**.
 
 ---
 
-## Findings & Recommendations
+## Current State Summary
 
-### Identify
-- Asset inventory incomplete (no IP addresses or classification).  
-- No third-party risk management.  
-- No cybersecurity roles and responsibilities defined.  
+### Environment Overview
+- Cloud-based dental practice management software  
+- Microsoft 365 email and file storage  
+- 4 Windows workstations  
+- Networked dental imaging system  
+- Shared Wi-Fi for staff and patients  
+- Third-party IT support provider (break/fix model)
 
-**Recommendations**:  
-- Implement vulnerability management with authenticated scans.  
-- Establish asset classification by criticality.  
-- Formalize third-party risk program and role accountability.  
+### Key Observations
 
----
-
-### Protect
-- Weak IAM (no MFA, shared admin accounts, poor offboarding).  
-- Minimal training. No executive or third-party awareness program.  
-- No DLP or data classification.  
-- No change/configuration management.  
-
-**Recommendations**:  
-- Adopt IAM with MFA, role-based access, and offboarding procedures.  
-- Launch recurring training for staff, execs, and third parties.  
-- Implement DLP and data classification.  
-- Formalize change control and HR-linked offboarding.  
+| Area | Observation |
+|----|------------|
+| Governance | No formal cybersecurity or HIPAA security policies |
+| Asset Management | No documented inventory of devices or systems |
+| Data Handling | ePHI stored in cloud apps and local imaging systems |
+| IAM | Shared logins used for dental software |
+| MFA | Not enabled on email or cloud services |
+| Backups | Cloud backups enabled, but not periodically tested |
+| Monitoring | No centralized logging or alerting |
+| Training | Informal, verbal HIPAA reminders only |
+| Incident Response | No defined process or contacts |
 
 ---
 
-### Detect
-- No SIEM or effective monitoring.  
-- Reliance on Microsoft Defender alerts only.  
-
-**Recommendations**:  
-- Deploy SIEM aligned to [MITRE ATT&CK](https://attack.mitre.org/).  
-- Establish detection processes, escalation points, and periodic penetration testing.  
+## Findings & Recommendations by CSF Function
 
 ---
 
-### Respond
-- No formal IR plan, playbooks, or escalation.  
+## GOVERN
 
-**Recommendations**:  
-- Develop IR policy and plans (aligned with SANS model).  
-- Define communication protocols with regulators, peers, and stakeholders.  
-- Incorporate forensic analysis into investigations.  
-- Continuously test and improve the response process.  
+**Findings**
+- No documented cybersecurity roles or responsibilities  
+- HIPAA Security Rule requirements understood informally but not documented  
+- No risk assessment or risk acceptance process  
+
+**Recommendations**
+- Designate Office Manager as Security & HIPAA Coordinator  
+- Document a simple cybersecurity and HIPAA security policy (5–7 pages)  
+- Conduct annual lightweight risk assessment focused on ePHI  
 
 ---
 
-### Recover
-- Recovery processes exist but lack coordinated communication.  
+## IDENTIFY
 
-**Recommendations**:  
-- Formalize recovery communications with ISPs, vendors, CSIRTs, and affected stakeholders.  
-- Establish policy for reputational risk management post-incident.  
+**Findings**
+- No formal asset inventory  
+- No classification of systems storing ePHI  
+- Third-party vendors not evaluated for security risk  
+
+**Recommendations**
+- Create and maintain an asset inventory (devices, software, vendors)  
+- Identify systems handling ePHI and label them as high impact  
+- Maintain a list of critical vendors and their access level  
+
+---
+
+## PROTECT
+
+**Findings**
+- Shared user accounts in practice management software  
+- No MFA for email or cloud services  
+- Patient Wi-Fi not segmented from business network  
+- Limited security awareness training  
+
+**Recommendations**
+- Implement unique user accounts for all staff  
+- Enable MFA on Microsoft 365 and cloud applications  
+- Separate patient Wi-Fi from business systems  
+- Conduct short quarterly security awareness refreshers  
+
+**Protect Metrics**
+
+| Control | Before | After |
+|------|-------|------|
+| MFA enabled | No | Yes |
+| Shared accounts | Yes | No |
+| Network segmentation | No | Yes |
+| Staff trained | Informal | Quarterly |
+
+---
+
+## DETECT
+
+**Findings**
+- No centralized monitoring or alerting  
+- Relies solely on antivirus notifications  
+
+**Recommendations**
+- Enable audit logging in Microsoft 365  
+- Configure email security alerts for suspicious logins  
+- Periodically review security alerts with IT provider  
+
+---
+
+## RESPOND
+
+**Findings**
+- No documented incident response process  
+- Staff unsure who to notify in case of breach or ransomware  
+
+**Recommendations**
+- Create a simple incident response checklist (1–2 pages)  
+- Define escalation contacts (IT vendor, dentist, legal counsel)  
+- Include HIPAA breach notification considerations  
+
+---
+
+## RECOVER
+
+**Findings**
+- Backups exist but restoration not tested  
+- No communication plan for extended outages  
+
+**Recommendations**
+- Test data restoration annually  
+- Document recovery priorities (patient scheduling, imaging, billing)  
+- Define patient communication approach for major disruptions  
 
 ---
 
 ## Conclusion
 
-WaltCorp’s current posture is reactive and siloed (Tier 1: Partial). By adopting the NIST CSF 2.0 as a roadmap, supported by frameworks like MITRE ATT&CK, NIST 800-53, and OWASP, WaltCorp can evolve toward an adaptive, risk-informed program (Tier 4).  
+This dental practice’s cybersecurity posture was **informal but typical** for a small healthcare provider. While no immediate evidence of compromise was found, several gaps posed elevated risk to **patient data confidentiality and operational continuity**.
 
-The path forward centers on governance, continuous monitoring, vulnerability management, and integrating security into the culture of the organization.  
+By adopting the **NIST Cybersecurity Framework 2.0** as a practical roadmap—and targeting **Tier 2: Risk-Informed**—the practice can materially reduce cyber and HIPAA risk without excessive cost or complexity.
+
+The most impactful improvements included:
+- Enabling MFA  
+- Eliminating shared accounts  
+- Clarifying responsibility for security  
+- Establishing basic incident response and recovery procedures  
+
+This case study demonstrates how nationally recognized frameworks can be **right-sized** for small healthcare organizations while still providing measurable risk reduction.
+
+---
